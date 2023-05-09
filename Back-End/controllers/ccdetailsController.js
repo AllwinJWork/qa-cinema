@@ -1,4 +1,4 @@
-const Users = require("../models/users.js");
+const CCDetails = require("../models/ccdetails.js");
 
 exports.create = (req, res) => {
     // Validate request
@@ -8,14 +8,17 @@ exports.create = (req, res) => {
       });
     }
   
-    // Create a Users
-    const user = new Users({
-      user_name: req.body.user_name,
-      user_fname: req.body.user_fname
+    // Create a CCDetails
+    const ccdetails = new CCDetails({
+      cc_user: req.body.cc_user,
+      cc_number: req.body.cc_number,
+      cc_date: req.body.cc_date,
+      cc_ccv: req.body.cc_ccv
+
     });
   
-    // Save User in the database
-    Users.create(user, (err, data) => {
+    // Save CC in the database
+    CCDetails.create(ccdetails, (err, data) => {
       if (err)
         res.status(500).send({
           message:
@@ -27,28 +30,27 @@ exports.create = (req, res) => {
 
 
 exports.findAll = (req, res) => {
-    const name = req.query.name;
   
-    Users.getAll(name, (err, data) => {
+    CCDetails.getAll((err, data) => {
       if (err)
         res.status(500).send({
           message:
-            err.message || "Some error occurred while retrieving users."
+            err.message || "Some error occurred while retrieving CC."
         });
       else res.send(data);
     });
   };
 
   exports.findOne = (req, res) => {
-    Users.findById(req.params.id, (err, data) => {
+    CCDetails.findById(req.params.id, (err, data) => {
       if (err) {
         if (err.kind === "not_found") {
           res.status(404).send({
-            message: `Not found User with id ${req.params.id}.`
+            message: `Not found CC with id ${req.params.id}.`
           });
         } else {
           res.status(500).send({
-            message: "Error retrieving User with id " + req.params.id
+            message: "Error retrieving CC with id " + req.params.id
           });
         }
       } else res.send(data);
@@ -65,18 +67,18 @@ exports.update = (req, res) => {
   
     console.log(req.body);
   
-    Users.updateById(
+    CCDetails.updateById(
       req.params.id,
-      new Users(req.body),
+      new CCDetails(req.body),
       (err, data) => {
         if (err) {
           if (err.kind === "not_found") {
             res.status(404).send({
-              message: `Not found User with id ${req.params.id}.`
+              message: `Not found CC with id ${req.params.id}.`
             });
           } else {
             res.status(500).send({
-              message: "Error updating User with id " + req.params.id
+              message: "Error updating CC with id " + req.params.id
             });
           }
         } else res.send(data);
@@ -85,17 +87,17 @@ exports.update = (req, res) => {
   };
 
   exports.delete = (req, res) => {
-    Users.remove(req.params.id, (err, data) => {
+    CCDetails.remove(req.params.id, (err, data) => {
       if (err) {
         if (err.kind === "not_found") {
           res.status(404).send({
-            message: `Not found User with id ${req.params.id}.`
+            message: `Not found CC with id ${req.params.id}.`
           });
         } else {
           res.status(500).send({
-            message: "Could not delete User with id " + req.params.id
+            message: "Could not delete CC with id " + req.params.id
           });
         }
-      } else res.send({ message: `User was deleted successfully!` });
+      } else res.send({ message: `CC was deleted successfully!` });
     });
   };
