@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `tickets` (
 CREATE TABLE IF NOT EXISTS `cc_details` (
     `id` INT(11) NOT NULL AUTO_INCREMENT,
     `cc_user` INT(11) NOT NULL,
-    `cc_number` INT(16) NOT NULL,
+    `cc_number` BIGINT(16) NOT NULL,
     `cc_date` INT(4) NOT NULL,
     `cc_ccv` INT(3) NOT NULL,
     PRIMARY KEY (`id`),
