@@ -48,17 +48,12 @@ const HomePage = () => {
         </Carousel.Item>
       </Carousel>
       {/* // Cards  */}
-      <Container className="hp-card-container">
+      <Container fluid className="hp-card-container">
         <Row>
           <Col className=" d-flex align-items-center justify-content-center">
-            <Card style={{ width: "18rem" }}>
+            <Card style={{ width: "18rem" }} className="hp-card">
               <Card.Img variant="top" src="images/guardians-3.jpg" />
               <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
                 <Button variant="primary">Go somewhere</Button>
               </Card.Body>
             </Card>{" "}
@@ -68,11 +63,6 @@ const HomePage = () => {
             <Card style={{ width: "18rem" }}>
               <Card.Img variant="top" src="images/guardians-3.jpg" />
               <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
                 <Button variant="primary">Go somewhere</Button>
               </Card.Body>
             </Card>{" "}
@@ -82,11 +72,11 @@ const HomePage = () => {
             <Card style={{ width: "18rem" }}>
               <Card.Img variant="top" src="images/guardians-3.jpg" />
               <Card.Body>
-                <Card.Title>Card Title</Card.Title>
+                {/* <Card.Title>Card Title</Card.Title>
                 <Card.Text>
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
-                </Card.Text>
+                </Card.Text> */}
                 <Button variant="primary">Go somewhere</Button>
               </Card.Body>
             </Card>{" "}
@@ -94,7 +84,7 @@ const HomePage = () => {
         </Row>
       </Container>
       {/* // New Release Cards  */}
-      <Container>
+      <Container fluid className="new-realease-container">
         <Row className="new-rel-row">
           <Col>
             <Card className="bg-dark  new-rel-card">
@@ -114,13 +104,13 @@ const HomePage = () => {
               </Card.ImgOverlay> */}
             </Card>
           </Col>
-          <Col>
+          <Col className="nr-text-col">
             {" "}
-            <Card className=" nr-text-card">
+            <Card className=" nr-text-card ">
               <Card.Body>
                 <Card.Title>New Releases</Card.Title>
 
-                <Card.Text>Check QA Cinemas newest releases. </Card.Text>
+                <Card.Text>Check QA Cinemas newest releases.</Card.Text>
                 <Card.Link href="#">
                   {" "}
                   <div className="d-grid gap-2">
@@ -132,6 +122,46 @@ const HomePage = () => {
                 {/* <Card.Link href="#">Another Link</Card.Link> */}
               </Card.Body>
             </Card>
+          </Col>
+        </Row>
+      </Container>
+      {/* // Footer  */}
+      <Container fluid className="footer-container">
+        <Row>
+          <Col> start</Col>
+        </Row>
+      </Container>
+      {/* // Social Footer  */}
+      <Container fluid className="footer-social-container">
+        <Row>
+          <Col>
+            {" "}
+            <ul class="list-inline social-links">
+              <li class="list-inline-item">
+                <a target="_blank" href="https://www.facebook.com/">
+                  <i class="fab fa-facebook-f"></i>
+                  <span class="sr-only">Facebook</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a target="_blank" href="https://twitter.com/explore">
+                  <i class="fab fa-twitter"></i>
+                  <span class="sr-only">Twitter</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a target="_blank" href="https://uk.linkedin.com/">
+                  <i class="fab fa-linkedin-in"></i>
+                  <span class="sr-only">Linkedin</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a target="_blank" href="https://www.instagram.com/">
+                  <i class="fab fa-instagram"></i>
+                  <span class="sr-only">Instagram</span>
+                </a>
+              </li>
+            </ul>
           </Col>
         </Row>
       </Container>
