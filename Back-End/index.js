@@ -52,6 +52,8 @@ app.get("/", (req, res) => {
 
 require("./routes/usersRoute.js")(app);
 require("./routes/ccdetailsRoute.js")(app);
+require("./routes/filmsRoute.js")(app);
+
 
 
 // set port, listen for requests

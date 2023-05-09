@@ -10,12 +10,12 @@ exports.create = (req, res) => {
 
   // Create a Film
   const film = new Films({
-    film_title: req.body.title,
-    film_year: req.body.year,
-    film_rating: req.body.rating,
-    film_genre: req.body.genre,
-    film_secondary_genre: req.body.secondary_genre,
-    film_poster: req.body.poster
+    film_title: req.body.film_title,
+    film_year: req.body.film_year,
+    film_rating: req.body.film_rating,
+    film_genre: req.body.film_genre,
+    film_secondary_genre: req.body.film_secondary_genre,
+    film_poster: req.body.film_poster
   });
 
   // Save Film in the database
