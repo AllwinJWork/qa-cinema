@@ -1,8 +1,8 @@
 module.exports = {
-    HOST: "<Include Instance IP Here from GCP SQL Dashboard>",
+    HOST: "35.246.113.74",
     USER: "root",  //Change user if you need by default root user
-    PASSWORD: "<Password>",  // Enter Password you entered while creating instance
-    DB: "<DBName>",  //Database name you want to connect with
+    PASSWORD: "",  // Enter Password you entered while creating instance
+    DB: "qa_cinema",  //Database name you want to connect with
     // Leave As it is or configure according to your need
     dialect: "mysql",
     pool: {
