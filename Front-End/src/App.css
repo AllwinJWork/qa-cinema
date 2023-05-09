@@ -12,7 +12,19 @@
   margin-top: 40px;
 }
 
-Carousel.Item {
+/* Cards */
+.hp-card-container {
+  margin-top: 40px;
+}
+
+.nr-card-img {
+  height: 50vh;
+  object-fit: fill;
+}
+.new-rel-row {
+  margin-top: 40px;
+}
+
+.nr-text-card {
   width: 100%;
-  height: auto;
 }
