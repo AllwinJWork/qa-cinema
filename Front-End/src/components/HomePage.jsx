@@ -63,7 +63,7 @@ const HomePage = () => {
             <Card style={{ width: "18rem" }}>
               <Card.Img variant="top" src="images/guardians-3.jpg" />
               <Card.Body>
-                <Button variant="primary">Go somewhere</Button>
+                <Button>Go somewhere</Button>
               </Card.Body>
             </Card>{" "}
           </Col>
@@ -128,16 +128,50 @@ const HomePage = () => {
       {/* // Footer  */}
       <Container fluid className="footer-container">
         <Row>
-          <Col> start</Col>
+          <Col className="QuickLinks-col">
+            {" "}
+            <ul>
+              <p></p>
+              <li>
+                {" "}
+                <a href=""> Quick Link</a>
+              </li>
+              <li>
+                {" "}
+                <a href=""> Quick Link</a>
+              </li>
+              <li>
+                {" "}
+                <a href=""> Quick Link</a>
+              </li>
+              <li>
+                {" "}
+                <a href=""> Quick Link</a>
+              </li>
+            </ul>
+          </Col>
+          <Col></Col>
+          <Col className="opening-col">
+            <ul>
+              <p>OPENING TIMES</p>
+              <li>Monday: 12pm-10pm</li>
+              <li>Tuesday: 12pm-10pm</li>
+              <li>Wednesday: 12pm-10pm</li>
+              <li>Thursday: 12pm-11pm</li>
+              <li>Friday: 12pm-12am</li>
+              <li>Saturday: 12pm-12am</li>
+              <li>Sunday: 12pm-10pm</li>
+            </ul>
+          </Col>
         </Row>
       </Container>
       {/* // Social Footer  */}
       <Container fluid className="footer-social-container">
         <Row>
-          <Col>
+          <Col className="d-flex justify-content-center">
             {" "}
-            <ul class="list-inline social-links">
-              <li class="list-inline-item">
+            <ul class="list-inline social-links ">
+              <li class="list-inline-item ">
                 <a target="_blank" href="https://www.facebook.com/">
                   <i class="fab fa-facebook-f"></i>
                   <span class="sr-only">Facebook</span>
