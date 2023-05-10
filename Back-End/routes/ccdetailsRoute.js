@@ -18,5 +18,5 @@ module.exports = app => {
       // Delete a User with id
   router.delete("/:id", ccdetails.delete);
   
-    app.use('/CC', router);
+    app.use('/cc', router);
   };
