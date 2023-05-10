@@ -3,19 +3,19 @@ module.exports = app => {
   
     var router = require("express").Router();
 
-    // Create a new Tutorial
+    // Create a new Ticket
     router.post("/", tickets.create);
   
-    // Retrieve all Users
+    // Retrieve all Ticket
     router.get("/", tickets.findAll);
 
-      // Retrieve a single User with id
+      // Retrieve a single Ticket with id
     router.get("/:id", tickets.findOne);
 
-      // Update a User with id
+      // Update a Ticket with id
     router.put("/:id", tickets.update);
 
-      // Delete a User with id
+      // Delete a Ticket with id
   router.delete("/:id", tickets.delete);
   
     app.use('/tickets', router);
