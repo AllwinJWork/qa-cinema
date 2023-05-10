@@ -21,15 +21,9 @@ Showings.create = (newShowing, result) => {
   });
 };
 
-Showings.getAll = (filmTitle, result) => {
-  let query = `SELECT showings.id, films.film_title, screens.screen_number, showings.showing_time, showings.showing_currentSeats
-               FROM showings
-               JOIN films ON showings.showing_film = films.id
-               JOIN screens ON showings.showing_screen = screens.id`;
+Showings.getAll = (result) => {
+  let query = `SELECT * FROM showings`;
 
-  if (filmTitle) {
-    query += ` WHERE films.film_title LIKE '%${filmTitle}%'`;
-  }
 
   sql.query(query, (err, res) => {
     if (err) {

@@ -27,7 +27,7 @@ exports.create = (req, res) => {
 exports.findAll = (req, res) => {
     const name = req.query.name;
   
-    Screens.getAll(name, (err, data) => {
+    Screens.getAll((err, data) => {
       if (err)
         res.status(500).send({
           message:
